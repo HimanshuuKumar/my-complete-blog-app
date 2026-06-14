@@ -20,7 +20,7 @@ const MyBlogs = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:4000/api/blogs/me", {
+      const res = await axios.get("https://my-complete-blog-app.onrender.com/api/blogs/me", {
         headers: { Authorization: token },
       });
       setBlogs(res.data.blogs || []);
@@ -42,7 +42,7 @@ const MyBlogs = () => {
       setDeletingId(blogId);
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:4000/api/blogs/deleteblogs/${blogId}`,
+        `https://my-complete-blog-app.onrender.com/api/blogs/deleteblogs/${blogId}`,
         {
           headers: { Authorization: token },
         },
