@@ -23,7 +23,7 @@ const Profile = () => {
 
       console.log("Fetching profile with token:", token);
 
-      const res = await axios.get("http://localhost:4000/api/users/profile", {
+      const res = await axios.get("https://my-complete-blog-app.onrender.com/api/users/profile", {
         headers: {
           Authorization: token, // Changed from 'authorization' to 'Authorization'
         },
